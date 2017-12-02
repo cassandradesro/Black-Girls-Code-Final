@@ -1,10 +1,10 @@
 $perfectpink: #ee5fa0;
-$ctapink: #f49ac1;
+$cta-pink: #f49ac1;
 
 
 html, body{
     font-family: 'Inconsolata', monospace;
-    background-color: #fff;
+    background-color: #f7f7f7;
     width: 100%;
 }
 
@@ -70,7 +70,7 @@ h1 a {
 }
 //END OF HEADER//////////////////////////////////
 .cta-button{
-    background-color: $ctapink;
+    background-color: $cta-pink;
     font-family: 'Inconsolata', monospace;
     padding: 10px 2%;
     font-size: 1.2rem;
@@ -86,26 +86,38 @@ h1 a {
 }
 
 .founder{
-    width:100%;
+    display: flex;
 
-    .founder-video video,{
+    video{
+        flex: 2;
+        align-self: center;
         width: 65%;
-        float: left;
     }
     .founder-info{
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        align-self: center;
         width: 35%;
-        float:left;
+        padding: 100px;
+        
+        button{
+            margin: 20px 0;
+        }
 
         span{
-            color: $ctapink;
+            color: $cta-pink;
             font-weight: 700;
         }
 
         p{
             font-size: 1.4rem;
+            margin-left: -40px;
+
         }
 
         strong{
+            margin-top: 5px;
             font-weight: 700;
             font-size: 1.8rem;
         }
@@ -115,7 +127,8 @@ h1 a {
 
 .partners{
     clear: both;
-    padding: 0 100px;
+    padding: 100px 100px;
+
 
     .partner-logos {
         display: flex;
@@ -137,7 +150,7 @@ h1 a {
 
     h2 {
         text-align: center;
-        padding: 50px 0; 
+       // padding: 50px 0; 
     }
 
 
@@ -201,4 +214,56 @@ h2{
 
     }
 
+}
+
+footer {
+    border-top: 1px solid #000;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 80px 30px;
+    //left: 50%;
+    //margin: 25px 0 25px -75px;  
+
+    a{
+        text-decoration: underline;
+        color: #000;
+
+        &:hover{
+            opacity: .5;
+        }
+    }
+}
+
+.footer-links{
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+
+    a{
+        padding: 0 5px;
+    }
+}
+.social-icons{
+    justify-content: flex-end;
+}
+.social-icons a {
+    float: left;
+    text-indent: -9999px;
+    overflow: hidden;
+    width: 46px;
+    height: 46px;
+    margin: 0 2px;
+    border-radius: 50%;
+}
+footer a.icon-twitter {
+    background: url(../img/icon-twitter.svg) no-repeat center $perfectpink;
+}
+footer a.icon-facebook {
+    background: url(../img/icon-facebook.svg) no-repeat center $perfectpink;
+}
+footer a.icon-pinterest {
+    background: url(../img/icon-pinterest.svg) no-repeat center $perfectpink;
+    background-size: 40%;
 }
